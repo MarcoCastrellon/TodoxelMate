@@ -11,8 +11,7 @@
     <link href="https://fonts.googleapis.com/css2?family=IM+Fell+DW+Pica+SC&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
-    <!-- <link rel="stylesheet" href="../style/normalize.css">
-    <link rel="stylesheet" href="../style/style.css"> -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
         <link rel="stylesheet" href="../scss/style.css">
     <title>Todo x el Mate</title>
 </head>
@@ -34,68 +33,192 @@
 
         <main class="productosPage contenedor">
             <h2>Productos</h2>
+            
+                <ul class="productosPage__lista">
+                    <li> <a class="animate__animated animate__backInLeft" href="#mates">Mates</a> </li>
+                    <li> <a class="animate__animated animate__backInLeft" href="#bombillas">Bombillas</a> </li>
+                    <li> <a class="animate__animated animate__backInLeft" href="#termos">Termos</a> </li>
+                </ul>
+            
             <div class="contenedorProductos">
 
-                <div class="productoPage animate__animated animate__fadeInUp">
+                 <div id="mates" data-aos="fade-up" data-aos-duration="1500" class="productoPage ">
                     <div class="productoPage__img">
-                        <img src="../img/mate1.png" alt="">
+                        <img src="../img/mate1.png" alt="Producto Mate">
                     </div>
                     
                     <div class="productoPage__descripcion">
-                        <h3>Mate Camionero</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                        <p class="productoPage__descripcion__precio">$ 2500</p>
+                        <h3> Camionero Alpaca Lisa</h3>
+                        <p>Mate estilo camionero forrado en cuero con virola lisa.</p>
+                        <p class="productoPage__descripcion__precio">$ 3.300</p>
                         <a href="#">Contactar</a>
                     </div>
                 </div>  <!-- Fin Producto -->
                 
-                <div class="productoPage animate__animated animate__fadeInUp ">
+                <div data-aos="fade-up" data-aos-duration="1500" class="productoPage ">
                     <div class="productoPage__img">
-                        <img src="../img/bombilla.jpg" alt="">
+                        <img src="../img/mate2.jpg" alt="Producto Mate">
                     </div>
                     
                     <div class="productoPage__descripcion">
-                        <h3> Alpaca pico de loro</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                        <p class="productoPage__descripcion__precio">$ 2500</p>
+                        <h3> Camionero Alpaca Cincelada</h3>
+                        <p>Mate estilo camionero forrado en cuero con virola cincelada.</p>
+                        <p class="productoPage__descripcion__precio">$ 4.500</p>
                         <a href="#">Contactar</a>
                     </div>
                 </div>  <!-- Fin Producto -->
                 
-                <div class="productoPage animate__animated animate__fadeInUp ">
+                <div data-aos="fade-up" data-aos-duration="1500" class="productoPage ">
                     <div class="productoPage__img">
-                        <img src="../img/termo1.jpg" alt="">
+                        <img src="../img/mate3.jpg" alt="Producto Mate">
+                    </div>
+                    
+                    <div class="productoPage__descripcion">
+                        <h3>Torpedo Alpaca Lisa</h3>
+                        <p>Mate estilo torpedo forrado en cuero con virola lisa.</p>
+                        <p class="productoPage__descripcion__precio">$ 3.200</p>
+                        <a href="#">Contactar</a>
+                    </div>
+                </div>  <!-- Fin Producto -->
+
+                <div data-aos="fade-up" data-aos-duration="1500" class="productoPage ">
+                    <div class="productoPage__img">
+                        <img src="../img/mate4.jpg" alt="Producto Mate">
+                    </div>
+                    
+                    <div class="productoPage__descripcion">
+                        <h3>Torpedo Alpaca Cincelada</h3>
+                        <p>Mate estilo torpedo forrado en cuero con virola cincelada de plateria fina.</p>
+                        <p class="productoPage__descripcion__precio">$ 4.500</p>
+                        <a href="#">Contactar</a>
+                    </div>
+                </div>  <!-- Fin Producto -->
+
+                <div data-aos="fade-up" data-aos-duration="1500" class="productoPage ">
+                    <div class="productoPage__img">
+                        <img src="../img/mate5.jpg" alt="Producto Mate">
+                    </div>
+                    
+                    <div class="productoPage__descripcion">
+                        <h3>Imperial Cinta Abstracta</h3>
+                        <p>Mate imperial cincelado a mano 100% artesanal.</p>
+                        <p class="productoPage__descripcion__precio">$ 7.500</p>
+                        <a href="#">Contactar</a>
+                    </div>
+                </div>  <!-- Fin Producto -->
+
+                <div data-aos="fade-up" data-aos-duration="1500" class="productoPage ">
+                    <div class="productoPage__img">
+                        <img src="../img/mate6.jpg" alt="Producto Mate">
+                    </div>
+                    
+                    <div class="productoPage__descripcion">
+                        <h3>Imperial Cuero Cincelado</h3>
+                        <p>Mate imperial cincelado a mano 100% artesanal con cuero trabajado.</p>
+                        <p class="productoPage__descripcion__precio">$ 8.500</p>
+                        <a href="#">Contactar</a>
+                    </div>
+                </div>  <!-- Fin Producto -->
+
+                <div id="bombillas" data-aos="fade-up" data-aos-duration="1500" class="productoPage ">
+                    <div class="productoPage__img">
+                        <img src="../img/bombilla1.jpg" alt="Producto Bombilla">
+                    </div>
+                    
+                    <div class="productoPage__descripcion">
+                        <h3>Alpaca Pico de Loro</h3>
+                        <p>Bombilla artesanal de alpaca estilo pico de loro.</p>
+                        <p class="productoPage__descripcion__precio">$ 2.900</p>
+                        <a href="#">Contactar</a>
+                    </div>
+                </div>  <!-- Fin Producto -->
+
+                <div data-aos="fade-up" data-aos-duration="1500" class="productoPage ">
+                    <div class="productoPage__img">
+                        <img src="../img/bombilla2.png" alt="Producto Bombilla">
+                    </div>
+                    
+                    <div class="productoPage__descripcion">
+                        <h3>Criolla de Alpaca</h3>
+                        <p>Bombilla artesanal de alpaca estilo criolla. </p>
+                        <p class="productoPage__descripcion__precio">$ 2.500</p>
+                        <a href="#">Contactar</a>
+                    </div>
+                </div>  <!-- Fin Producto -->
+
+                <div data-aos="fade-up" data-aos-duration="1500" class="productoPage ">
+                    <div class="productoPage__img">
+                        <img src="../img/bombilla3.jpg" alt="Producto Bombilla">
+                    </div>
+                    
+                    <div class="productoPage__descripcion">
+                        <h3>Bombillon Pico de Rey</h3>
+                        <p>Bombilla artesanal de alpaca estilo pico de rey.</p>
+                        <p class="productoPage__descripcion__precio">$ 4.200</p>
+                        <a href="#">Contactar</a>
+                    </div>
+                </div>  <!-- Fin Producto -->
+
+                <div id="termos" data-aos="fade-up" data-aos-duration="1500" class="productoPage ">
+                    <div class="productoPage__img">
+                        <img src="../img/termo1.jpg" alt="Producto Mate">
                     </div>
                     
                     <div class="productoPage__descripcion">
                         <h3>Termo Clasico 1L</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                        <p class="productoPage__descripcion__precio">$ 2500</p>
+                        <p>Termo clasico de acero 1L con pico cebador.</p>
+                        <p class="productoPage__descripcion__precio">$ 3.500</p>
                         <a href="#">Contactar</a>
                     </div>
                 </div>  <!-- Fin Producto -->
 
+                <div data-aos="fade-up" data-aos-duration="1500" class="productoPage ">
+                    <div class="productoPage__img">
+                        <img src="../img/termo2.png" alt="Producto Mate">
+                    </div>
+                    
+                    <div class="productoPage__descripcion">
+                        <h3>Termo Stanley Classic</h3>
+                        <p>Termo Stanley classic bottle de 1L  con pico cebador.</p>
+                        <p class="productoPage__descripcion__precio">$ 14.000</p>
+                        <a href="#">Contactar</a>
+                    </div>
+                </div>  <!-- Fin Producto -->
 
+                <div data-aos="fade-up" data-aos-duration="1500" class="productoPage ">
+                    <div class="productoPage__img">
+                        <img src="../img/termo3.png" alt="Producto Mate">
+                    </div>
+                    
+                    <div class="productoPage__descripcion">
+                        <h3>Termo Stanley Polar Blanco</h3>
+                        <p>Termo Stanley Polar blanco de 1L con pico cebador.</p>
+                        <p class="productoPage__descripcion__precio">$ 13.500</p>
+                        <a href="#">Contactar</a>
+                    </div>
+                </div>  <!-- Fin Producto -->
                 
             </div>
             </main>
-            
 
             <footer class="footer">
-                <div class="contenedor contenidoFooter">
-                    <div class="contenidoFooter__wd">
-                        <p>Create by: Marco Castrellon</p>
-                    </div>
-                    <div class="contenidoFooter__iconos">
+                <div class="contenidoFooter">
+                    <a href="#"><p class="contenidoFooter__titulo"> Todo x el Mate</p></a>
+        
+                    <div class="redesFooter">
                         <a href="#"><i class="fab fa-linkedin"></i></a>
                         <a href="#"><i class="fab fa-whatsapp-square"></i></a>
                         <a href="#"><i class="fab fa-instagram-square"></i></a>
                         <a href="#"><i class="fab fa-facebook-square"></i></a>
                     </div>
-        
                 </div>
-                    <p>Todos Los Derechos Reservados &copy;</p>
+        
+                    <p class="copy">Todos los derechos reservados </p>
+                    
             </footer>
-
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <script>
+            AOS.init();
+          </script>
 </body>
 </html>

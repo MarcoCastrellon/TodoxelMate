@@ -21,9 +21,12 @@
 
 .navegacion {
     background-color: map-get($colores, colorPrimario ) ;
-    position: sticky;
-    top: 0;
-    z-index: 20;
+
+    @include tablet {
+        position: sticky;
+        top: 0;
+        z-index: 20;
+    }
 
     .navegacion__lista {
         list-style: none;
@@ -257,9 +260,54 @@
 
 // Productos (Pages)
 
-.productosPage h2 {
+    .productosPage h2 {
+        text-align: center;
+        font-size: 5rem;
+        background-color: map-get($colores, colorPrimario) ;
+        color: map-get($colores, blanco) ;
+    }
+
+    .productosPage__lista {
+        list-style: none;
+        padding: 0;
+        margin: 2rem 0 4rem 0;
+    }
+
+@include tablet {
+    .productosPage__lista {
+        display: flex;
+        justify-content: space-around;
+    }
+}
+
+.productosPage__lista a {
+    font-size: 3rem;
+    color: map-get($colores, blanco) ;
+    padding: 1rem;
+    border-radius: .5rem;
+    display: block;
     text-align: center;
-    font-size: 5rem;
+    margin-bottom: 2rem;
+
+
+    &::after {
+        content: "";
+        display: block;
+        height: 0.2rem;
+        width: 50%;
+        background-color: map-get($colores, negro ) ;
+        margin: 0 auto;
+    }
+}
+
+@include tablet {
+    .productosPage__lista a {
+        margin: 0;
+
+        &::after {
+            width: 100%;
+        }
+    }
 }
 
 @include tablet {
@@ -293,6 +341,11 @@
 
 .productoPage__descripcion h3 {
     text-align: center;
+    font-size: 2.5rem;
+}
+
+.productoPage__descripcion p {
+    font-size: 2rem;
 }
 
 .productoPage__descripcion__precio {
@@ -316,6 +369,7 @@
     text-align: center;
     padding: 1rem;
     box-shadow: 0px 5px 0px map-get($colores, negro) ;
+    
 
     &:hover {
         box-shadow: 0px 3px 0px map-get($colores, negro) ;
@@ -333,6 +387,7 @@
 .productoPage__img img:hover {
     transform: scale(1.1);
 }
+
 
 // Nosotros (Page)
 
@@ -391,6 +446,8 @@
 .mainContacto h2 {
     font-size: 5rem;
     text-align: center;
+    background-color: map-get($colores, colorPrimario) ;
+    color: map-get($colores, blanco) ;
 }
 
 .mainContacto p {
@@ -455,7 +512,19 @@
     border-radius: 2px;
     display: block;
     text-align: center;
+    box-shadow: 0px 3.5px 0px map-get($colores, negro) ;
+    transition: all .2s;
+
+    &:hover {
+        box-shadow: 0px 1px 0px map-get($colores, negro) ;
+    }
+
+    &:active {
+        box-shadow: none;
+    }
+
 }
+
 
 @include tablet {
     .enviar__btn {
@@ -475,6 +544,8 @@
 
     & h2 {
         font-size: 5rem;
+        background-color: map-get($colores, colorPrimario) ;
+        color: map-get($colores, blanco) ;
     }
 
     & iframe {
@@ -518,42 +589,78 @@
     .contenidoFooter {
         display: flex;
         align-items: center;
-        justify-content: space-between;
+        justify-content: space-evenly;
     }
 }
-// @media (min-width: 769px) {
-//     .contenidoFooter {
-//         display: flex;
-//         align-items: center;
-//         justify-content: space-between;
-//     }
+
+// .contenidoFooter__iconos {
+//     display: flex;
+//     justify-content: space-between;
+//     margin-bottom: 1.5rem;
+//     text-align: center;
 // }
 
-.contenidoFooter__iconos {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 1.5rem;
-    text-align: center;
-}
-
-@include tablet {
-    .contenidoFooter__iconos {
-        gap: 2rem;
-    }
-}
+// @include tablet {
+//     .contenidoFooter__iconos {
+//         gap: 2rem;
+//     }
+// }
 // @media (min-width: 769px) {
 //     .contenidoFooter__iconos {
 //         gap: 2rem;
 //     }
 // }
 
-.contenidoFooter__iconos i {
-    font-size: 3.5rem;
-    color: map-get($colores, blanco) ;
+// .contenidoFooter__iconos i {
+//     font-size: 3.5rem;
+//     color: map-get($colores, blanco) ;
+// }
+
+// .footer p {
+//     color: map-get($colores, blanco) ;
+//     font-size: 2.3rem;
+//     text-align: center;
+// }
+
+.contenidoFooter__titulo {
+    text-align: center;
+    font-size: 3rem;
+    margin-bottom: 2rem;
 }
 
-.footer p {
-    color: map-get($colores, blanco) ;
-    font-size: 2.3rem;
-    text-align: center;
+
+
+@include tablet {
+    .contenidoFooter__titulo {
+        margin: 0;
+    }
 }
+
+.redesFooter {
+    text-align: center;
+
+    & a {
+        margin-right: 1.5rem;
+
+        &:last-of-type {
+            margin: 0;
+        }
+    }
+}
+
+.redesFooter a i {
+    font-size: 3rem;
+    color: map-get($colores, blanco);
+    transition: all ease-in-out .2s;
+
+    &:hover {
+        transform: translateY(-3px) scale(1.05);
+    }
+}
+
+.copy {
+    text-align: center;
+    font-size: 2.3rem;
+    margin: 4rem 0 0 0;
+}
+
