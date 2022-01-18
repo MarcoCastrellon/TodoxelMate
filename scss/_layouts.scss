@@ -306,7 +306,7 @@
 .productoPage__descripcion__precio {
     font-size: 2.5rem;
     font-weight: bold;
-    border: 1px solid map-get($colores, blanco ) ;
+    border: 1px solid map-get($colores, blanco );
     width: 50%;
     margin: 0 auto;
     text-align: center;
@@ -315,7 +315,7 @@
 
 .productoPage__descripcion a {
     margin-top: 2rem;
-    background-color: map-get($colores, colorSecundario);
+    background-color: map-get($colores, negro);
     display: block;
     color: map-get($colores, blanco) ;
     border-radius: 1rem;
@@ -323,18 +323,14 @@
     font-weight: bold;
     text-align: center;
     padding: 1rem;
-    box-shadow: 0px 3px 0px map-get($colores, negro) ;
-    
+
 
     &:hover {
-        box-shadow: 0px 1.5px 0px map-get($colores, negro) ;
+        background-color: map-get($colores, blanco) ;
+        color: map-get($colores, negro) ;
     }
 
-    &:active {
-        box-shadow: none;
-    }
 }
-
 .productoPage__img img {
     transition: all .5s ease;
 }
@@ -440,87 +436,95 @@
     color: map-get($colores, blanco) ;
 }
 
-.mainContacto p {
-    font-size: 2rem;
-    text-align: center;
-    margin: 0;
-}
-@include tablet {
-    .mainContacto p {
-        font-size: 3rem;
-        margin-bottom: 2rem;
-    }
-}
-
 
 .formulario {
-    margin: 0 auto;
-    padding: 5rem;
-    background: rgba(0,0,0,.3) ;
-    border-radius: 1rem;
+    background-color: map-get($colores, blanco);
+    padding: 2rem;
+    border: 2px solid map-get($colores, colorPrimario);
+
+    & fieldset {
+        border: none;
+    }
+
+    & legend {
+        display: none;
+    }
+  @include tablet {
+    & legend {
+        text-align: center;
+        text-transform: uppercase;
+        font-size: 1.8rem;
+        margin-bottom: 2rem;
+        font-weight: bold;
+        display: block;
+  } 
+  }   
 }
 
 .campo {
+    display: flex;
     margin-bottom: 2rem;
-}
 
-.campo__label {
-    text-align: right;
-    padding-right: 2rem;
-    font-size: 2.3rem;
-    font-weight: bold;
-}
+    & label {
+        width: 5rem;
+        margin-right: 4rem;
+        text-align: right;
+        font-weight: bold;
+        font-size: 1.8rem;
+    }
 
-.campo__input {
-    width: 100%;
-    padding: 1rem;
-    border-radius: 2px;
-    border: none;
+    & input {
+       width: 90%;
+       background-color: map-get($colores, colorPrimario);
+       border: 1px solid map-get($colores, negro);
+       color:map-get($colores, blanco) ;
+       height: 2.8rem;
+    }
+ 
 
-}
+    & input::placeholder {
+        color: map-get($colores, blanco);
+    }
 
-.campo__inputTextarea {
-    height: 20rem;
-    resize: none;
+    & textarea {
+        width: 90%;
+        background-color: map-get($colores, colorPrimario);
+        border: 1px solid map-get($colores, negro);
+        color:map-get($colores, blanco) ;
+    }
+
+    & textarea::placeholder {
+        color: map-get($colores, blanco);
+    }
+
+    &__textarea {
+        height: 10rem;
+        resize: none;
+    }
+
+    @include tablet {
+        &__textarea {
+            height: 20rem;
+        }
+    }
 }
 
 .enviar {
-    margin-top: 2rem;
-    text-align: end;
+    text-align: right;
+
 }
 
 .enviar__btn {
-    background-color: map-get($colores, colorPrimario) ;
-    color: map-get($colores, blanco) ;
+    background-color: map-get($colores, negro);
+    color: map-get($colores, blanco);
     padding: 1rem 2rem;
-    font-size: 2.3rem;
-    border-radius: 2px;
-    display: block;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 1rem;
+    font-size: 1.8rem;
     text-align: center;
-    box-shadow: 0px 3.5px 0px map-get($colores, negro) ;
-    transition: all .2s;
-
-    &:hover {
-        box-shadow: 0px 1px 0px map-get($colores, negro) ;
-    }
-
-    &:active {
-        box-shadow: none;
-    }
-
 }
-
-
-@include tablet {
-    .enviar__btn {
-        display: inline-block;
-    }
-}
-// @media (min-width: 769px) {
-//     .enviar__btn {
-//         display: inline-block;
-//     }
-// }
 
 // Elaboracion 
 

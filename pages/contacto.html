@@ -33,31 +33,35 @@
 
 
             <main class="mainContacto contenedor">
+
                 <h2>Contacto</h2>
-                <p>Llene los campos y un asesor se pondrá en contacto con usted.  </p>
-                <form  data-aos="fade-up-left" data-aos-duration="2000" class="formulario">
-                    <div class="campo">
-                        <label class="campo__label" for="nombre">Nombre :</label>
-                        <input class="campo__input" type="text" id="nombre" placeholder="Ingrese su Nombre">
-                    </div>
+
+                <form  data-aos="zoom-in" data-aos-duration="1500" class="formulario">
+                    <fieldset>
+
+                        <legend>Nos pondremos en contacto con usted.</legend>
+
+                        <div class="campo">
+                            <label for="nombre">Nombre:</label>
+                            <input id="nombre" type="text" placeholder="Ingese su nombre">
+                         </div>
+
+                        <div class="campo">
+                            <label for="apellido">Apellido:</label>
+                            <input id="apellido" type="text" placeholder="Ingese su apellido">
+                         </div>
 
                     <div class="campo">
-                        <label class="campo__label" for="apellido">Apellido :</label>
-                        <input class="campo__input" type="text" id="apellido" placeholder="Ingrese su Apellido">
+                        <label for="consulta">Mensaje:</label>
+                        <textarea class="campo__textarea"  id="consulta"  placeholder="Consultanos"></textarea>
                     </div>
 
-                    <div class="campo">
-                        <label class="campo__label" for="correo">Correo :</label>
-                        <input class="campo__input" type="text" id="correo" placeholder="Ingrese su Email">
-                    </div>
-
-                    <div class="campo">
-                        <label class="campo__label" for="consulta">Consulta :</label>
-                        <textarea class="campo__input campo__inputTextarea" id="consulta"  placeholder="Escribanos su consulta"></textarea>
-                    </div>
-                    <div class="enviar">
-                        <a class="enviar__btn" href="#">Enviar</a>
-                    </div>
+                 </fieldset>
+                 <div class="enviar">
+                    <input class="enviar__btn" type="submit" value="Enviar">
+                </div>
+                    
+                
                 </form>
 
             </main>

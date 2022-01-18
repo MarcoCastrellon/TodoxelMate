@@ -713,7 +713,7 @@ img {
 
 .productoPage__descripcion a {
   margin-top: 2rem;
-  background-color: #71532d;
+  background-color: #000000;
   display: block;
   color: #ffffff;
   border-radius: 1rem;
@@ -721,18 +721,11 @@ img {
   font-weight: bold;
   text-align: center;
   padding: 1rem;
-  -webkit-box-shadow: 0px 3px 0px #000000;
-          box-shadow: 0px 3px 0px #000000;
 }
 
 .productoPage__descripcion a:hover {
-  -webkit-box-shadow: 0px 1.5px 0px #000000;
-          box-shadow: 0px 1.5px 0px #000000;
-}
-
-.productoPage__descripcion a:active {
-  -webkit-box-shadow: none;
-          box-shadow: none;
+  background-color: #ffffff;
+  color: #000000;
 }
 
 .productoPage__img img {
@@ -851,82 +844,118 @@ img {
   color: #ffffff;
 }
 
-.mainContacto p {
-  font-size: 2rem;
-  text-align: center;
-  margin: 0;
-}
-
-@media (min-width: 769px) {
-  .mainContacto p {
-    font-size: 3rem;
-    margin-bottom: 2rem;
-  }
-}
-
 .formulario {
-  margin: 0 auto;
-  padding: 5rem;
-  background: rgba(0, 0, 0, 0.3);
-  border-radius: 1rem;
+  background-color: #ffffff;
+  padding: 2rem;
+  border: 2px solid #1c130c;
 }
 
-.campo {
-  margin-bottom: 2rem;
-}
-
-.campo__label {
-  text-align: right;
-  padding-right: 2rem;
-  font-size: 2.3rem;
-  font-weight: bold;
-}
-
-.campo__input {
-  width: 100%;
-  padding: 1rem;
-  border-radius: 2px;
+.formulario fieldset {
   border: none;
 }
 
-.campo__inputTextarea {
-  height: 20rem;
-  resize: none;
-}
-
-.enviar {
-  margin-top: 2rem;
-  text-align: end;
-}
-
-.enviar__btn {
-  background-color: #1c130c;
-  color: #ffffff;
-  padding: 1rem 2rem;
-  font-size: 2.3rem;
-  border-radius: 2px;
-  display: block;
-  text-align: center;
-  -webkit-box-shadow: 0px 3.5px 0px #000000;
-          box-shadow: 0px 3.5px 0px #000000;
-  -webkit-transition: all .2s;
-  transition: all .2s;
-}
-
-.enviar__btn:hover {
-  -webkit-box-shadow: 0px 1px 0px #000000;
-          box-shadow: 0px 1px 0px #000000;
-}
-
-.enviar__btn:active {
-  -webkit-box-shadow: none;
-          box-shadow: none;
+.formulario legend {
+  display: none;
 }
 
 @media (min-width: 769px) {
-  .enviar__btn {
-    display: inline-block;
+  .formulario legend {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+    font-weight: bold;
+    display: block;
   }
+}
+
+.campo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 2rem;
+}
+
+.campo label {
+  width: 5rem;
+  margin-right: 4rem;
+  text-align: right;
+  font-weight: bold;
+  font-size: 1.8rem;
+}
+
+.campo input {
+  width: 90%;
+  background-color: #1c130c;
+  border: 1px solid #000000;
+  color: #ffffff;
+  height: 2.8rem;
+}
+
+.campo input::-webkit-input-placeholder {
+  color: #ffffff;
+}
+
+.campo input:-ms-input-placeholder {
+  color: #ffffff;
+}
+
+.campo input::-ms-input-placeholder {
+  color: #ffffff;
+}
+
+.campo input::placeholder {
+  color: #ffffff;
+}
+
+.campo textarea {
+  width: 90%;
+  background-color: #1c130c;
+  border: 1px solid #000000;
+  color: #ffffff;
+}
+
+.campo textarea::-webkit-input-placeholder {
+  color: #ffffff;
+}
+
+.campo textarea:-ms-input-placeholder {
+  color: #ffffff;
+}
+
+.campo textarea::-ms-input-placeholder {
+  color: #ffffff;
+}
+
+.campo textarea::placeholder {
+  color: #ffffff;
+}
+
+.campo__textarea {
+  height: 10rem;
+  resize: none;
+}
+
+@media (min-width: 769px) {
+  .campo__textarea {
+    height: 20rem;
+  }
+}
+
+.enviar {
+  text-align: right;
+}
+
+.enviar__btn {
+  background-color: #000000;
+  color: #ffffff;
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-right: 1rem;
+  font-size: 1.8rem;
+  text-align: center;
 }
 
 .mainElaboracion {
